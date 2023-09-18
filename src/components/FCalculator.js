@@ -3,54 +3,59 @@ import { useEffect, useState} from 'react';
 import $ from 'jquery';
 import Table from 'react-bootstrap/Table';
 import "../style.css"
-const Calculator = (props) => {
-    var given = parseInt(props.given);
+const FCalculator = (props) => {
+    var given = parseFloat(props.given);
     var b = parseInt(props.base);
     
     const [string, setString] = useState('');
     useEffect(() => {
+
         $('#myTable > tbody > tr').remove();
-        var x = given;
-        var quo = 0;
+            var x = given;
+            var pro = 0;
+            var base = b;
+            var whole = 0;
+            var decimal = 0;
+            var initial = x;
+            const arr = [];
+            var ctr = 0;
+            while(ctr < 6){
+                pro = x * base;
+                whole = parseInt(pro);
+                decimal = pro - whole;
 
-        var base = b;
+                arr[ctr] = whole;
+                ctr += 1;
 
-        var rem = 0;
-        var initial = x;
-        const arr = [];
-        var ctr = 0;
-        
-        while (x !== 0) {
-            quo = x / base;
-            rem = x % base;
-
-            arr[ctr] = rem;
-            ctr += 1;
-
-            $('#myTable > tbody:last-child').append('<tr><td>' + x + '</td><td>' + base + '</td><td>' + parseInt(quo) + '</td><td>' + parseInt(rem) + '</td></tr>');
-            x = parseInt(quo);
-        }
+                $('#myTable > tbody:last-child').append('<tr><td>'+ x.toPrecision(6) +'</td><td>' + base + '</td><td>' + pro.toPrecision(6) + '</td><td>' + parseInt(whole) + '</td></tr>');
+                x = decimal;
+                if (decimal == 0){
+                    break;
+                }
+            }
 
         $('#given').html("Given: " + initial);
-        var y = ctr - 1;
+        
         if (base === 2) {
             setString("Binary: ");
-            $('#result').html(" ");
-            for (let i = y; i >= 0; i--) {
-                $('#result').append(arr[i] + " ");
+            $('#result').html("<b class='fs-1'>.</b> ");
+            for (var i = 0; i < ctr; i++){
+                $('#result').append(arr[i]);
             }
         }
         else if (base === 8) {
             setString("Octal: ");
-            $('#result').html(" ");
-            for (let i = y; i >= 0; i--) {
-                $('#result').append(arr[i] + " ");
+            $('#result').html("<b class='fs-1'>.</b> ");
+
+            for (var i = 0; i < ctr; i++){
+                $('#result').append(arr[i]);
             }
         }
         else if (base === 16) {
             setString("Hexadecimal: ");
-            $('#result').html(" ");
-            for (let i = y; i >= 0; i--) {
+            $('#result').html("<b class='fs-1'>.</b> ");
+
+            for (let i = 0; i <= ctr; i++) {
                 if (arr[i] >= 10) {
                     switch (arr[i]) {
                         case 10:
@@ -83,8 +88,9 @@ const Calculator = (props) => {
         else {
             var letter = 65;
             setString('Conversion: ');
-            $('#result').html(' ');
-            for (let i = y; i >= 0; i--) {
+            $('#result').html("<b class='fs-1'>.</b> ");
+
+            for (let i = 0; i <= ctr; i++) {
                 if (arr[i] >= 10) {
                     for (var j = 10; j < arr[i]; j++) {
                         letter += 1;
@@ -112,8 +118,8 @@ const Calculator = (props) => {
                     <tr>
                     <th>Number</th>
                     <th>Base</th>
-                    <th>Quotient</th>
-                    <th>Remainder</th>
+                    <th>Product</th>
+                    <th>Integer</th>
                     </tr>
                 </thead>
                 <tbody></tbody>
@@ -126,4 +132,4 @@ const Calculator = (props) => {
     )
 }
 
-export default Calculator
+export default FCalculator

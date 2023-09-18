@@ -30,8 +30,13 @@ const NavbarComponent = () => {
                             <LinkContainer to="/">
                             <Nav.Link>Home</Nav.Link>
                             </LinkContainer>
-                            
-                            <NavDropdown title="Whole Number" id="basic-nav-dropdown">
+                            <LinkContainer to="/whole-number">
+                            <Nav.Link>Whole Number</Nav.Link>
+                            </LinkContainer>
+                            <LinkContainer to="/fraction">
+                            <Nav.Link>Fraction</Nav.Link>
+                            </LinkContainer>
+                            {/* <NavDropdown title="Whole Number" id="basic-nav-dropdown">
                                 <LinkContainer to="/whole-number/binary">
                                 <NavDropdown.Item>Binary</NavDropdown.Item>
                                 </LinkContainer>
@@ -45,8 +50,8 @@ const NavbarComponent = () => {
                                 <NavDropdown.Item>Any Base</NavDropdown.Item>
                                 </LinkContainer>
                                 
-                            </NavDropdown>
-                            <NavDropdown title="Fraction" id="basic-nav-dropdown">
+                            </NavDropdown> */}
+                            {/* <NavDropdown title="Fraction" id="basic-nav-dropdown">
                             <LinkContainer to="/fraction/binary">
                                 <NavDropdown.Item>Binary</NavDropdown.Item>
                                 </LinkContainer>
@@ -59,7 +64,7 @@ const NavbarComponent = () => {
                                 <LinkContainer to="/fraction/anybase">
                                 <NavDropdown.Item>Any Base</NavDropdown.Item>
                                 </LinkContainer>
-                            </NavDropdown>
+                            </NavDropdown> */}
                         </Nav>
                     </Navbar.Collapse>
                 </Container>

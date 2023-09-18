@@ -7,7 +7,7 @@ import Calculator from "../../components/Calculator";
 import Info from "../../routes/WholeNumber/Info";
 import Card from "react-bootstrap/Card";
 import Footer from "../../components/Footer.js";
-import Form from "react-bootstrap/Form";
+// import Form from "react-bootstrap/Form";
 // // import $ from 'jquery';
 
 const Binary = () => {

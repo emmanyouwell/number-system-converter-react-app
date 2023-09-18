@@ -104,7 +104,7 @@ const AnyBase = () => {
                                             <input type="text" id="num" className="form-control " ></input>
                                             <small className="text-danger" id="error"></small>
                                         </div>
-                                        <div class="my-3" id="baseInput">
+                                        <div className="my-3" id="baseInput">
                                             <label className="form-label text-success"><h2>Enter Base</h2></label>
                                             <input type="text" id="numBase" class="form-control w" ></input>
                                             <small className="text-danger" id="error2"></small>

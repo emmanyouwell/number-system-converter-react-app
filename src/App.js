@@ -2,7 +2,8 @@ import React from "react";
 // import "./index.css";
 
 import Home from "./routes/Home";
-// import WholeNumber from "./routes/WholeNumber";
+import WholeNumber from "./routes/WholeNumber";
+import Fraction from "./routes/Fraction.js";
 import Binary from "./routes/WholeNumber/Binary.js";
 // import Project from "./routes/Project";
 // import Contact from "./routes/Contact";
@@ -16,10 +17,12 @@ function App() {
     <>
     <Routes>
       <Route path="/" element={<Home/>} />
-      <Route path="/whole-number/binary" element={<Binary/>}/>
+      <Route path="/whole-number" element={<WholeNumber/>}/>
+      <Route path="/fraction" element={<Fraction/>}/>
+      {/* <Route path="/whole-number/binary" element={<Binary/>}/>
       <Route path="/whole-number/octal" element={<Octal/>}/>
       <Route path="/whole-number/hexadecimal" element={<Hexa/>}/>
-      <Route path="/whole-number/anybase" element={<AnyBase/>}/>
+      <Route path="/whole-number/anybase" element={<AnyBase/>}/> */}
     </Routes>
     </>
   );
