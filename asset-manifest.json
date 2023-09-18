@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/number-system-converter-react-app/static/css/main.26ebdd6f.css",
+    "main.js": "/number-system-converter-react-app/static/js/main.8f494014.js",
+    "static/media/logo2.svg": "/number-system-converter-react-app/static/media/logo2.60537425edc3186e404fc1365d294c84.svg",
+    "static/media/logo2.png": "/number-system-converter-react-app/static/media/logo2.7016daed4afcaed7927a.png",
+    "index.html": "/number-system-converter-react-app/index.html",
+    "main.26ebdd6f.css.map": "/number-system-converter-react-app/static/css/main.26ebdd6f.css.map",
+    "main.8f494014.js.map": "/number-system-converter-react-app/static/js/main.8f494014.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.26ebdd6f.css",
+    "static/js/main.8f494014.js"
+  ]
+}
