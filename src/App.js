@@ -10,14 +10,14 @@ import {Route, Routes} from "react-router-dom";
 
 function App() {
   return (
-    <>
+    <div className="bg-light">
     <Routes>
       <Route path="/" element={<Home/>} />
       <Route path="/whole-number" element={<WholeNumber/>}/>
       <Route path="/fraction" element={<Fraction/>}/>
       <Route path="/converter" element={<Converter/>}/>
     </Routes>
-    </>
+    </div>
   );
 }
 

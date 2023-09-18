@@ -108,7 +108,7 @@ const Calculator = (props) => {
 
 
             <Table responsive striped bordered id="myTable" className="content-table">
-                <thead>
+                <thead >
                     <tr>
                     <th>Number</th>
                     <th>Base</th>

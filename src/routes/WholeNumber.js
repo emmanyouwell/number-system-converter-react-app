@@ -189,7 +189,7 @@ const WholeNumber = () => {
   }
   return (
     <>
-      <div className="" id="container">
+      <div className="mb-5" id="container">
 
         <Navbar />
         <Container className="p-3 mt-5">
@@ -211,10 +211,10 @@ const WholeNumber = () => {
 
 
 
-          <Card className="my-3 p-4" >
+          <div className=" card my-3 p-4">
 
-            <Card.Body className="p-4">
-              <div id="input" className="p-1">
+            <div className="p-4 card-body">
+              <div id="input" className="p-1 ">
                 <div id="input" className="p-1">
                   <Row>
                     <Col>
@@ -241,8 +241,8 @@ const WholeNumber = () => {
                 {/* {given > 0 && <Calculator given={given} base={2}/>} */}
 
               </div>
-            </Card.Body>
-          </Card>
+            </div>
+          </div>
           <Info base={parseInt(base)} />
         </Container>
 
