@@ -4,12 +4,8 @@ import React from "react";
 import Home from "./routes/Home";
 import WholeNumber from "./routes/WholeNumber";
 import Fraction from "./routes/Fraction.js";
-import Binary from "./routes/WholeNumber/Binary.js";
-// import Project from "./routes/Project";
-// import Contact from "./routes/Contact";
-import Octal from "./routes/WholeNumber/Octal.js";
-import Hexa from "./routes/WholeNumber/Hexadecimal.js";
-import AnyBase from "./routes/WholeNumber/AnyBase.js";
+import Converter from "./routes/Converter.js";
+
 import {Route, Routes} from "react-router-dom";
 
 function App() {
@@ -19,10 +15,7 @@ function App() {
       <Route path="/" element={<Home/>} />
       <Route path="/whole-number" element={<WholeNumber/>}/>
       <Route path="/fraction" element={<Fraction/>}/>
-      {/* <Route path="/whole-number/binary" element={<Binary/>}/>
-      <Route path="/whole-number/octal" element={<Octal/>}/>
-      <Route path="/whole-number/hexadecimal" element={<Hexa/>}/>
-      <Route path="/whole-number/anybase" element={<AnyBase/>}/> */}
+      <Route path="/converter" element={<Converter/>}/>
     </Routes>
     </>
   );
